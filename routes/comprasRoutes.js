@@ -3,6 +3,7 @@ const { verifyToken } = require('../controllers/controllers');
 
 const CarritoSchema = require('../models/cart');
 const BitacoraSchema = require('../models/bitacora');
+const { json } = require("body-parser");
 
 const router = express.Router();
 
@@ -25,10 +26,15 @@ router.get('/compra', verifyToken, async (req, res) => {
 router.post('/compra', verifyToken, async (req, res) => {
     try {
         const productosComprados = await CarritoSchema.find({ "dpi": req.dpi });
+        const stringifyVacio = JSON.stringify(productosComprados);
 
-        for (const carrito2 of productosComprados) {
-            if (carrito2.productos.length === 0) {
-                return res.status(404).json({ error: 'No hay productos agregados' });
+        if (stringifyVacio.length === 2) {
+            return res.status(404).json({ error: 'No hay productos agregados' });
+        } else if (stringifyVacio.length > 2) {
+            for (const carrito of productosComprados) {
+                if (carrito.productos.length === 0) {
+                    return res.status(404).json({ error: 'No hay productos agregados' });
+                }
             }
         }
 
