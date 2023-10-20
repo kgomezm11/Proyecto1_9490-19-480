@@ -1,0 +1,61 @@
+[{
+  "_id": {
+    "$oid": "64fae63638317b90df75531d"
+  },
+  "identificador": 1,
+  "nombre": "Audífonos",
+  "marca": "JBL",
+  "disponibilidad": 10,
+  "descuento": 0,
+  "precio": 100,
+  "precioDescuento": 100,
+  "imagen": "./img/aud-jbl.png",
+  "descripcion": "Auriculares inalámbricos supraaurales para niños",
+  "categorias": [
+    "Inalámbricos",
+    "Niños",
+    "Electrónicos"
+  ],
+  "habilitado": 1
+},
+{
+  "_id": {
+    "$oid": "64fae71c38317b90df75531f"
+  },
+  "identificador": 2,
+  "nombre": "Televisor",
+  "marca": "Samsung",
+  "disponibilidad": 5,
+  "descuento": 0,
+  "precio": 5000,
+  "precioDescuento": 5000,
+  "imagen": "./img/tv-samsung.png",
+  "descripcion": "La brillante calidad de imagen 4K que completan 20 redes neuronales diferentes te garantiza la potencia de 4K.",
+  "categorias": [
+    "Televisores",
+    "Hogar",
+    "Electrónicos"
+  ],
+  "habilitado": 1
+},
+{
+  "_id": {
+    "$oid": "64fffaed810aea92e4ad1d60"
+  },
+  "identificador": 11,
+  "nombre": "Unidad de Almacenamiento SSD",
+  "marca": "Gigabyte Aorus",
+  "disponibilidad": 15,
+  "descuento": 500,
+  "precio": 1500,
+  "precioDescuento": 1000,
+  "imagen": "./img/aourus-gigabyte-ssd.png",
+  "descripcion": "Capacidad 1000GB Interfaz PCIe 4.0 x4 NVMe 1.3 Factor de forma M.2 2280 Memoria 3D TLC NAND Flash Caché DDR4 1GB Lectura 5000 MB/s Escritura 4400 MB/s Lectura IOPS 750k Escritura IOPS 700k",
+  "categorias": [
+    "Unidades de Almacenamiento",
+    "Informática",
+    "PC"
+  ],
+  "habilitado": 0,
+  "__v": 0
+}]

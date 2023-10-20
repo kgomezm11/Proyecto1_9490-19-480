@@ -1,0 +1,70 @@
+[{
+  "_id": {
+    "$oid": "64faa0fe253b8a1b92bc8dd9"
+  },
+  "dpi": 277,
+  "nombres": "Kelvin José",
+  "apellidos": "Gómez Morales",
+  "fechaNacimiento": "11-03-2000",
+  "direccionEntrega": "Mi casa",
+  "nit": 777,
+  "numeroTelefonico": 4958,
+  "correoElectronico": "kelvin@gmail.com",
+  "clave": "admin",
+  "validacionClave": "nose",
+  "rol": "admin",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64fab9ab275404a968b5d41b"
+  },
+  "dpi": 1,
+  "nombres": "Lester Haroldo",
+  "apellidos": "Blanco Melendres",
+  "fechaNacimiento": "20-10-2000",
+  "direccionEntrega": "Su casa",
+  "nit": 11,
+  "numeroTelefonico": 5561,
+  "correoElectronico": "lester@gmail.com",
+  "clave": "user",
+  "validacionClave": "nose2",
+  "rol": "usuario",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64fabe6add903a26515607bf"
+  },
+  "dpi": 99,
+  "nombres": "Test",
+  "apellidos": "Test Test",
+  "fechaNacimiento": "99-99-9999",
+  "direccionEntrega": "Test Test",
+  "nit": 99,
+  "numeroTelefonico": 99,
+  "correoElectronico": "Test@Test.Test",
+  "clave": "Test",
+  "validacionClave": "Test",
+  "rol": "usuario",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64fff2fa810aea92e4ad1d26"
+  },
+  "dpi": {
+    "$numberLong": "23554890101"
+  },
+  "nombres": "Usuario",
+  "apellidos": "Prueba",
+  "fechaNacimiento": "11-11-1999",
+  "direccionEntrega": "1ra. Avenida 5ta. Calle, Zona 8",
+  "nit": 5321265,
+  "numeroTelefonico": 75834352,
+  "correoElectronico": "test@miumg.edu.gt",
+  "clave": "testPASSAD#421",
+  "validacionClave": "f3adsAQd",
+  "rol": "usuario",
+  "__v": 0
+}]

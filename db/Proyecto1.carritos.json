@@ -1,0 +1,38 @@
+[{
+  "_id": {
+    "$oid": "64fc112c527f737e3a947adf"
+  },
+  "dpi": 277,
+  "productos": [],
+  "total": 0,
+  "__v": 28
+},
+{
+  "_id": {
+    "$oid": "64fc1299527f737e3a947ae9"
+  },
+  "dpi": 999,
+  "productos": [],
+  "total": 0,
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "64fc283b3cbae96a9d725e19"
+  },
+  "dpi": 1,
+  "productos": [],
+  "total": 0,
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "64fff5a2810aea92e4ad1d34"
+  },
+  "dpi": {
+    "$numberLong": "23554890101"
+  },
+  "productos": [],
+  "total": 0,
+  "__v": 2
+}]

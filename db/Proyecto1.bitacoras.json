@@ -1,0 +1,20 @@
+[{
+  "_id": {
+    "$oid": "64fd4183fb9f54738dfc0cbc"
+  },
+  "dpi": 277,
+  "productos": [],
+  "total": 0,
+  "__v": 13
+},
+{
+  "_id": {
+    "$oid": "64fff8c7810aea92e4ad1d55"
+  },
+  "dpi": {
+    "$numberLong": "23554890101"
+  },
+  "productos": [],
+  "total": 0,
+  "__v": 0
+}]

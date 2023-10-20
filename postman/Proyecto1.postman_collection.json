@@ -1,0 +1,459 @@
+{
+	"info": {
+		"_postman_id": "a7fd1495-3244-4b38-8ec8-01a7d12d91df",
+		"name": "Proyecto1",
+		"description": "Colección de requests para el Proyecto1 de Desarrollo Web - UMG\n\nKELVIN JOSÉ GÓMEZ MORALRES 9490-19-480\n\nLESTER HAROLDO BLANCO MELENDRES 9490-19-5517",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19568641"
+	},
+	"item": [
+		{
+			"name": "Módulo Registro Usuarios",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombres\": \"Usuario\",\r\n  \"apellidos\": \"Prueba\",\r\n  \"fechaNacimiento\": \"11-11-1999\",\r\n  \"direccionEntrega\": \"1ra. Avenida 5ta. Calle, Zona 8\", \r\n  \"nit\": 5321265,\r\n  \"numeroTelefonico\": 75834352,\r\n  \"correoElectronico\": \"test@miumg.edu.gt\",\r\n  \"clave\": \"testPASSAD#421\",\r\n  \"validacionClave\": \"f3adsAQd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/registro/23554890101",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"registro",
+						"23554890101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Módulo Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"correoElectronico\": \"kelvin@gmail.com\",\r\n    \"clave\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Módulo Perfil - GET",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvRW5jb250cmFkbyI6eyJfaWQiOiI2NGZmZWUwMzgxMGFlYTkyZTRhZDFkMWEiLCJkcGkiOjIzNTU0ODkwMTAxLCJub21icmVzIjoiVXN1YXJpbyIsImFwZWxsaWRvcyI6IlBydWViYSIsImZlY2hhTmFjaW1pZW50byI6IjExLTExLTE5OTkiLCJkaXJlY2Npb25FbnRyZWdhIjoiMXJhLiBBdmVuaWRhIDV0YS4gQ2FsbGUsIFpvbmEgOCIsIm5pdCI6NTMyMTI2NSwibnVtZXJvVGVsZWZvbmljbyI6NzU4MzQzNTIsImNvcnJlb0VsZWN0cm9uaWNvIjoidGVzdEBtaXVtZy5lZHUuZ3QiLCJjbGF2ZSI6InRlc3RQQVNTQUQjNDIxIiwidmFsaWRhY2lvbkNsYXZlIjoiZjNhZHNBUWQiLCJyb2wiOiJ1c3VhcmlvIiwiX192IjowfSwiaWF0IjoxNjk0NDk0NTMxLCJleHAiOjE2OTQ0OTQ4MzF9.ZTg999UjRnUv-_SBmflJuRyTJdwEmVtzN_LLZ-DoYBg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/perfil/23554890101",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"perfil",
+						"23554890101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Módulo Perfil - PATCH",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvRW5jb250cmFkbyI6eyJfaWQiOiI2NGZmZWUwMzgxMGFlYTkyZTRhZDFkMWEiLCJkcGkiOjIzNTU0ODkwMTAxLCJub21icmVzIjoiVXN1YXJpbyIsImFwZWxsaWRvcyI6IlBydWViYSIsImZlY2hhTmFjaW1pZW50byI6IjExLTExLTE5OTkiLCJkaXJlY2Npb25FbnRyZWdhIjoiMXJhLiBBdmVuaWRhIDV0YS4gQ2FsbGUsIFpvbmEgOCIsIm5pdCI6NTMyMTI2NSwibnVtZXJvVGVsZWZvbmljbyI6NzU4MzQzNTIsImNvcnJlb0VsZWN0cm9uaWNvIjoidGVzdEBtaXVtZy5lZHUuZ3QiLCJjbGF2ZSI6InRlc3RQQVNTQUQjNDIxIiwidmFsaWRhY2lvbkNsYXZlIjoiZjNhZHNBUWQiLCJyb2wiOiJ1c3VhcmlvIiwiX192IjowfSwiaWF0IjoxNjk0NDk1MTAxLCJleHAiOjE2OTQ0OTU0MDF9.Yqim7kNp1aj9n9S5usj_olnjmjlL8vbMxE10WrLteMc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numeroTelefonico\": 47795523\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/perfil/23554890101",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"perfil",
+						"23554890101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Módulo Perfil - DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvRW5jb250cmFkbyI6eyJfaWQiOiI2NGZmZWUwMzgxMGFlYTkyZTRhZDFkMWEiLCJkcGkiOjIzNTU0ODkwMTAxLCJub21icmVzIjoiVXN1YXJpbyIsImFwZWxsaWRvcyI6IlBydWViYSIsImZlY2hhTmFjaW1pZW50byI6IjExLTExLTE5OTkiLCJkaXJlY2Npb25FbnRyZWdhIjoiMXJhLiBBdmVuaWRhIDV0YS4gQ2FsbGUsIFpvbmEgOCIsIm5pdCI6NTMyMTI2NSwibnVtZXJvVGVsZWZvbmljbyI6NzU4MzQzNTIsImNvcnJlb0VsZWN0cm9uaWNvIjoidGVzdEBtaXVtZy5lZHUuZ3QiLCJjbGF2ZSI6InRlc3RQQVNTQUQjNDIxIiwidmFsaWRhY2lvbkNsYXZlIjoiZjNhZHNBUWQiLCJyb2wiOiJ1c3VhcmlvIiwiX192IjowfSwiaWF0IjoxNjk0NDk1MTAxLCJleHAiOjE2OTQ0OTU0MDF9.Yqim7kNp1aj9n9S5usj_olnjmjlL8vbMxE10WrLteMc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/perfil/23554890101",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"perfil",
+						"23554890101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Módulo Productos - GET",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvRW5jb250cmFkbyI6eyJfaWQiOiI2NGZmZjJmYTgxMGFlYTkyZTRhZDFkMjYiLCJkcGkiOjIzNTU0ODkwMTAxLCJub21icmVzIjoiVXN1YXJpbyIsImFwZWxsaWRvcyI6IlBydWViYSIsImZlY2hhTmFjaW1pZW50byI6IjExLTExLTE5OTkiLCJkaXJlY2Npb25FbnRyZWdhIjoiMXJhLiBBdmVuaWRhIDV0YS4gQ2FsbGUsIFpvbmEgOCIsIm5pdCI6NTMyMTI2NSwibnVtZXJvVGVsZWZvbmljbyI6NzU4MzQzNTIsImNvcnJlb0VsZWN0cm9uaWNvIjoidGVzdEBtaXVtZy5lZHUuZ3QiLCJjbGF2ZSI6InRlc3RQQVNTQUQjNDIxIiwidmFsaWRhY2lvbkNsYXZlIjoiZjNhZHNBUWQiLCJyb2wiOiJ1c3VhcmlvIiwiX192IjowfSwiaWF0IjoxNjk0NDk1NDkwLCJleHAiOjE2OTQ0OTU3OTB9.GlVEWBjN8gm2TUPEpSgE5hJ9cv8iW8FSFNLg50WpCbE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Módulo Productos - GET One",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvRW5jb250cmFkbyI6eyJfaWQiOiI2NGZmZjJmYTgxMGFlYTkyZTRhZDFkMjYiLCJkcGkiOjIzNTU0ODkwMTAxLCJub21icmVzIjoiVXN1YXJpbyIsImFwZWxsaWRvcyI6IlBydWViYSIsImZlY2hhTmFjaW1pZW50byI6IjExLTExLTE5OTkiLCJkaXJlY2Npb25FbnRyZWdhIjoiMXJhLiBBdmVuaWRhIDV0YS4gQ2FsbGUsIFpvbmEgOCIsIm5pdCI6NTMyMTI2NSwibnVtZXJvVGVsZWZvbmljbyI6NzU4MzQzNTIsImNvcnJlb0VsZWN0cm9uaWNvIjoidGVzdEBtaXVtZy5lZHUuZ3QiLCJjbGF2ZSI6InRlc3RQQVNTQUQjNDIxIiwidmFsaWRhY2lvbkNsYXZlIjoiZjNhZHNBUWQiLCJyb2wiOiJ1c3VhcmlvIiwiX192IjowfSwiaWF0IjoxNjk0NDk1ODU5LCJleHAiOjE2OTQ0OTYxNTl9.QXZGOW1tv-jtm85qPiI1aBuYIZvHXrPh9uwc9wRTXKM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/producto/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"producto",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Módulo Productos - POST",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvRW5jb250cmFkbyI6eyJfaWQiOiI2NGZhYTBmZTI1M2I4YTFiOTJiYzhkZDkiLCJkcGkiOjI3Nywibm9tYnJlcyI6IktlbHZpbiBKb3PDqSIsImFwZWxsaWRvcyI6IkfDs21leiBNb3JhbGVzIiwiZmVjaGFOYWNpbWllbnRvIjoiMTEtMDMtMjAwMCIsImRpcmVjY2lvbkVudHJlZ2EiOiJNaSBjYXNhIiwibml0Ijo3NzcsIm51bWVyb1RlbGVmb25pY28iOjQ5NTgsImNvcnJlb0VsZWN0cm9uaWNvIjoia2VsdmluQGdtYWlsLmNvbSIsImNsYXZlIjoiYWRtaW4iLCJ2YWxpZGFjaW9uQ2xhdmUiOiJub3NlIiwicm9sIjoiYWRtaW4iLCJfX3YiOjB9LCJpYXQiOjE2OTQ0OTczNTUsImV4cCI6MTY5NDQ5NzY1NX0.7gXvvVPJA72n-V1e-M4cr7zmQhYKd_SUIuvWW0H_kBw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"identificador\": 11,\r\n  \"nombre\": \"Unidad de Almacenamiento\",\r\n  \"marca\": \"Gigabyte Aorus\",\r\n  \"disponibilidad\": 15,\r\n  \"descuento\": 500,\r\n  \"precio\": 1500,\r\n  \"imagen\": \"./img/aorus-ssd.png\",\r\n  \"descripcion\": \"Capacidad 1000GB Interfaz PCIe 4.0 x4 NVMe 1.3 Factor de forma M.2 2280 Memoria 3D TLC NAND Flash Caché DDR4 1GB Lectura 5000 MB/s Escritura 4400 MB/s Lectura IOPS 750k Escritura IOPS 700k\",\r\n  \"categorias\": [\r\n    \"Unidades de Almacenamiento\",\r\n    \"Informática\",\r\n    \"PC\"\r\n  ],\r\n  \"habilitado\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/producto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"producto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Módulo Productos - PATCH",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvRW5jb250cmFkbyI6eyJfaWQiOiI2NGZhYTBmZTI1M2I4YTFiOTJiYzhkZDkiLCJkcGkiOjI3Nywibm9tYnJlcyI6IktlbHZpbiBKb3PDqSIsImFwZWxsaWRvcyI6IkfDs21leiBNb3JhbGVzIiwiZmVjaGFOYWNpbWllbnRvIjoiMTEtMDMtMjAwMCIsImRpcmVjY2lvbkVudHJlZ2EiOiJNaSBjYXNhIiwibml0Ijo3NzcsIm51bWVyb1RlbGVmb25pY28iOjQ5NTgsImNvcnJlb0VsZWN0cm9uaWNvIjoia2VsdmluQGdtYWlsLmNvbSIsImNsYXZlIjoiYWRtaW4iLCJ2YWxpZGFjaW9uQ2xhdmUiOiJub3NlIiwicm9sIjoiYWRtaW4iLCJfX3YiOjB9LCJpYXQiOjE2OTQ0OTc4ODIsImV4cCI6MTY5NDQ5ODE4Mn0.QFol4YQbq8OqOuZcus82X_QNOPwY4OiEoPoaNGNdBCU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Unidad de Almacenamiento SSD\",\r\n    \"imagen\": \"./img/aourus-gigabyte-ssd.png\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/producto/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"producto",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Módulo Productos - DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvRW5jb250cmFkbyI6eyJfaWQiOiI2NGZhYTBmZTI1M2I4YTFiOTJiYzhkZDkiLCJkcGkiOjI3Nywibm9tYnJlcyI6IktlbHZpbiBKb3PDqSIsImFwZWxsaWRvcyI6IkfDs21leiBNb3JhbGVzIiwiZmVjaGFOYWNpbWllbnRvIjoiMTEtMDMtMjAwMCIsImRpcmVjY2lvbkVudHJlZ2EiOiJNaSBjYXNhIiwibml0Ijo3NzcsIm51bWVyb1RlbGVmb25pY28iOjQ5NTgsImNvcnJlb0VsZWN0cm9uaWNvIjoia2VsdmluQGdtYWlsLmNvbSIsImNsYXZlIjoiYWRtaW4iLCJ2YWxpZGFjaW9uQ2xhdmUiOiJub3NlIiwicm9sIjoiYWRtaW4iLCJfX3YiOjB9LCJpYXQiOjE2OTQ0OTgwOTIsImV4cCI6MTY5NDQ5ODM5Mn0.i9s-MUBcVxSV4iKg-6Y9nim2HLhWkrmgM-OOziual9M",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/producto/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"producto",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Módulo Carrito - GET",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvRW5jb250cmFkbyI6eyJfaWQiOiI2NGZmZjJmYTgxMGFlYTkyZTRhZDFkMjYiLCJkcGkiOjIzNTU0ODkwMTAxLCJub21icmVzIjoiVXN1YXJpbyIsImFwZWxsaWRvcyI6IlBydWViYSIsImZlY2hhTmFjaW1pZW50byI6IjExLTExLTE5OTkiLCJkaXJlY2Npb25FbnRyZWdhIjoiMXJhLiBBdmVuaWRhIDV0YS4gQ2FsbGUsIFpvbmEgOCIsIm5pdCI6NTMyMTI2NSwibnVtZXJvVGVsZWZvbmljbyI6NzU4MzQzNTIsImNvcnJlb0VsZWN0cm9uaWNvIjoidGVzdEBtaXVtZy5lZHUuZ3QiLCJjbGF2ZSI6InRlc3RQQVNTQUQjNDIxIiwidmFsaWRhY2lvbkNsYXZlIjoiZjNhZHNBUWQiLCJyb2wiOiJ1c3VhcmlvIiwiX192IjowfSwiaWF0IjoxNjk0NDk2MzcwLCJleHAiOjE2OTQ0OTY2NzB9.2wjeyOB4-WKyL0GBmx4qfiRTZrGWJYYM9TLSKsqUyzY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/carrito",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"carrito"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Módulo Carrito - POST",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvRW5jb250cmFkbyI6eyJfaWQiOiI2NGZmZjJmYTgxMGFlYTkyZTRhZDFkMjYiLCJkcGkiOjIzNTU0ODkwMTAxLCJub21icmVzIjoiVXN1YXJpbyIsImFwZWxsaWRvcyI6IlBydWViYSIsImZlY2hhTmFjaW1pZW50byI6IjExLTExLTE5OTkiLCJkaXJlY2Npb25FbnRyZWdhIjoiMXJhLiBBdmVuaWRhIDV0YS4gQ2FsbGUsIFpvbmEgOCIsIm5pdCI6NTMyMTI2NSwibnVtZXJvVGVsZWZvbmljbyI6NzU4MzQzNTIsImNvcnJlb0VsZWN0cm9uaWNvIjoidGVzdEBtaXVtZy5lZHUuZ3QiLCJjbGF2ZSI6InRlc3RQQVNTQUQjNDIxIiwidmFsaWRhY2lvbkNsYXZlIjoiZjNhZHNBUWQiLCJyb2wiOiJ1c3VhcmlvIiwiX192IjowfSwiaWF0IjoxNjk0NDk2MTUwLCJleHAiOjE2OTQ0OTY0NTB9.w9OoA3QiEGK49e86Gv1lZM1p2grNPAEuc8cS0xjQVXc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"identificador\": 2,\r\n    \"cantidad\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/carrito",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"carrito"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Módulo Carrito - DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvRW5jb250cmFkbyI6eyJfaWQiOiI2NGZmZjJmYTgxMGFlYTkyZTRhZDFkMjYiLCJkcGkiOjIzNTU0ODkwMTAxLCJub21icmVzIjoiVXN1YXJpbyIsImFwZWxsaWRvcyI6IlBydWViYSIsImZlY2hhTmFjaW1pZW50byI6IjExLTExLTE5OTkiLCJkaXJlY2Npb25FbnRyZWdhIjoiMXJhLiBBdmVuaWRhIDV0YS4gQ2FsbGUsIFpvbmEgOCIsIm5pdCI6NTMyMTI2NSwibnVtZXJvVGVsZWZvbmljbyI6NzU4MzQzNTIsImNvcnJlb0VsZWN0cm9uaWNvIjoidGVzdEBtaXVtZy5lZHUuZ3QiLCJjbGF2ZSI6InRlc3RQQVNTQUQjNDIxIiwidmFsaWRhY2lvbkNsYXZlIjoiZjNhZHNBUWQiLCJyb2wiOiJ1c3VhcmlvIiwiX192IjowfSwiaWF0IjoxNjk0NDk2NjIwLCJleHAiOjE2OTQ0OTY5MjB9.6su4D8CNi_gMZlbhjC2PWObZKe8-cfBiOc2f8SV9A8c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"identificador\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/carrito",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"carrito"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Módulo Compra - GET",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvRW5jb250cmFkbyI6eyJfaWQiOiI2NGZmZjJmYTgxMGFlYTkyZTRhZDFkMjYiLCJkcGkiOjIzNTU0ODkwMTAxLCJub21icmVzIjoiVXN1YXJpbyIsImFwZWxsaWRvcyI6IlBydWViYSIsImZlY2hhTmFjaW1pZW50byI6IjExLTExLTE5OTkiLCJkaXJlY2Npb25FbnRyZWdhIjoiMXJhLiBBdmVuaWRhIDV0YS4gQ2FsbGUsIFpvbmEgOCIsIm5pdCI6NTMyMTI2NSwibnVtZXJvVGVsZWZvbmljbyI6NzU4MzQzNTIsImNvcnJlb0VsZWN0cm9uaWNvIjoidGVzdEBtaXVtZy5lZHUuZ3QiLCJjbGF2ZSI6InRlc3RQQVNTQUQjNDIxIiwidmFsaWRhY2lvbkNsYXZlIjoiZjNhZHNBUWQiLCJyb2wiOiJ1c3VhcmlvIiwiX192IjowfSwiaWF0IjoxNjk0NDk2OTU3LCJleHAiOjE2OTQ0OTcyNTd9.AkI4JvUloPGHLiUzgGYlOY3SDJSlq5sC5oigYCTeXHM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/compra",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"compra"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Módulo Compra - POST",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvRW5jb250cmFkbyI6eyJfaWQiOiI2NGZmZjJmYTgxMGFlYTkyZTRhZDFkMjYiLCJkcGkiOjIzNTU0ODkwMTAxLCJub21icmVzIjoiVXN1YXJpbyIsImFwZWxsaWRvcyI6IlBydWViYSIsImZlY2hhTmFjaW1pZW50byI6IjExLTExLTE5OTkiLCJkaXJlY2Npb25FbnRyZWdhIjoiMXJhLiBBdmVuaWRhIDV0YS4gQ2FsbGUsIFpvbmEgOCIsIm5pdCI6NTMyMTI2NSwibnVtZXJvVGVsZWZvbmljbyI6NzU4MzQzNTIsImNvcnJlb0VsZWN0cm9uaWNvIjoidGVzdEBtaXVtZy5lZHUuZ3QiLCJjbGF2ZSI6InRlc3RQQVNTQUQjNDIxIiwidmFsaWRhY2lvbkNsYXZlIjoiZjNhZHNBUWQiLCJyb2wiOiJ1c3VhcmlvIiwiX192IjowfSwiaWF0IjoxNjk0NDk2OTU3LCJleHAiOjE2OTQ0OTcyNTd9.AkI4JvUloPGHLiUzgGYlOY3SDJSlq5sC5oigYCTeXHM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/compra",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"compra"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
