@@ -22,7 +22,6 @@ router.get('/compra', verifyToken, async (req, res) => {
 });
 
 
-// POST - AGREGAR PRODUCTOS AL CARRITO
 router.post('/compra', verifyToken, async (req, res) => {
     try {
         const productosComprados = await CarritoSchema.find({ "dpi": req.dpi });
@@ -63,8 +62,18 @@ router.post('/compra', verifyToken, async (req, res) => {
             });
         }
 
-        // Agrega los productos con cantidades consolidadas a la bitácora
-        nuevaCompra.productos = Object.values(productosTotales);
+        // Actualiza o agrega productos con cantidades consolidadas a la bitácora
+        nuevaCompra.productos.forEach((producto, index) => {
+            const identificador = producto.identificador;
+            if (productosTotales[identificador]) {
+                producto.cantidad += productosTotales[identificador].cantidad;
+                nuevaCompra.productos[index] = producto; // Actualiza el producto existente
+                delete productosTotales[identificador]; // Elimina el producto consolidado
+            }
+        });
+
+        // Agrega productos consolidados restantes a la bitácora
+        nuevaCompra.productos = nuevaCompra.productos.concat(Object.values(productosTotales));
 
         // Calcula el total en función de los productos en la bitácora
         nuevaCompra.total = nuevaCompra.productos.reduce((total, producto) => {
@@ -83,6 +92,16 @@ router.post('/compra', verifyToken, async (req, res) => {
         res.status(500).json({ error: 'Error interno del servidor' });
     }
 });
+
+
+
+
+
+
+
+
+
+
 
 
 
