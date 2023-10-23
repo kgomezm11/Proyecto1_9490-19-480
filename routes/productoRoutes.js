@@ -71,6 +71,11 @@ router.post('/producto', verifyToken, async (req, res) => {
             const habilitadoValidar = habilitado;
             const precioDescuento = precio - descuento;
 
+            if (identificador === undefined || nombre === undefined || marca === undefined || disponibilidad === undefined || descuento === undefined || precio === undefined || imagen === undefined || descripcion === undefined || categorias === undefined || habilitado === undefined
+                || identificador === null || nombre === null || marca === null || disponibilidad === null || descuento === null || precio === null || imagen === null || descripcion === null || categorias === null || habilitado === null) {
+                return res.status(400).json({ error: 'Todos los campos son requeridos' });
+            }
+
             if (descuento >= precio) {
                 res.status(400).json({ error: 'Descuento no puede ser mayor o igual al precio' });
                 return;
