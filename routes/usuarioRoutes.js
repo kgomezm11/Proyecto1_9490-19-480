@@ -30,7 +30,7 @@ router.post('/login', async (req, res) => {
 // POST - SE CREA UN NUEVO USUARIO SEGÚN LOS DATOS INGRESADOS
 router.post('/registro/:dpi', async (req, res) => {
     try {
-        const regex = /^[A-Za-z]+$/;
+        const regex = /^[A-Za-z\s]+$/;
         const dpi = req.params.dpi;
         const {
             nombres,
@@ -118,7 +118,7 @@ router.get('/perfil/:dpi', verifyToken, (req, res) => {
 
 //PATCH - MODIFICA LOS DATOS ASOCIADOS AL USUARIO
 router.patch('/perfil/:dpi', verifyToken, async (req, res) => {
-    const regex = /^[A-Za-z]+$/;
+    const regex = /^[A-Za-z\s]+$/;
     const dpiBuscar = req.params.dpi;
     if (dpiBuscar == req.dpi) {
 
